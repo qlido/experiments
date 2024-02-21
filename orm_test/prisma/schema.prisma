@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:1234@localhost:3306/ormtest"
+}
+
+model test {
+  id   Int    @id @default(autoincrement())
+  name String
+}
