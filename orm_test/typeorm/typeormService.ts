@@ -15,7 +15,7 @@ export async function typeormDefaultArrayInsert() {
     const data = [];
     for (let i = 0; i < 1000; i++) {
         data.push({
-            name: `typeorm Bulk ${i}`
+            name: `typeorm Array ${i}`
         });
     }
     await AppDataSource.transaction(async (manager) => {

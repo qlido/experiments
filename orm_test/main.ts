@@ -20,36 +20,38 @@ async function main() {
     await prismaDefaultInsert()
     console.timeEnd('prismaDefault')
 
-    // console.time('prismaDefaultArrayInsert')
-    // await prismaDefaultArrayInsert()
-    // console.timeEnd('prismaDefaultArrayInsert')
-    //
-    // console.time('prismaBulkInsert')
-    // await prismaBulkInsert()
-    // console.timeEnd('prismaBulkInsert')
+    console.time('prismaDefaultArrayInsert')
+    await prismaDefaultArrayInsert()
+    console.timeEnd('prismaDefaultArrayInsert')
+
+    console.time('prismaBulkInsert')
+    await prismaBulkInsert()
+    console.timeEnd('prismaBulkInsert')
 
 
-    // console.time('typeormDefaultInsert')
-    // await typeormDefaultInsert()
-    // console.timeEnd('typeormDefaultInsert')
-    //
-    // console.time('typeormDefaultArrayInsert')
-    // await typeormDefaultArrayInsert()
-    // console.timeEnd('typeormDefaultArrayInsert')
+    console.time('typeormDefaultInsert')
+    await typeormDefaultInsert()
+    console.timeEnd('typeormDefaultInsert')
 
-    // console.time('typeormBulkInsert')
-    // await typeormBulkInsert()
-    // console.timeEnd('typeormBulkInsert')
+    console.time('typeormDefaultArrayInsert')
+    await typeormDefaultArrayInsert()
+    console.timeEnd('typeormDefaultArrayInsert')
+
+    console.time('typeormBulkInsert')
+    await typeormBulkInsert()
+    console.timeEnd('typeormBulkInsert')
 
 
     await destroy()
     console.timeEnd('main')
 }
-// async function repeatMain() {
-//     for (let i = 0; i < 10; i++) {
-//         await main()
-//     }
-// }
-main().then(() => {
+
+async function repeatMain() {
+    for (let i = 0; i < 10; i++) {
+        await main()
+    }
+}
+
+repeatMain().then(() => {
     console.log('done')
 })

@@ -1,8 +1,19 @@
 import {PrismaClient} from "@prisma/client";
 
 export const prismaClient = new PrismaClient({
-    log: ['query']
-});
+    // log: [
+    //     {
+    //         emit: 'event',
+    //         level: 'query',
+    //     }
+    // ],
+    log: ['query'],
+})
+
+// prismaClient.$on('query', (e) => {
+//     if(e.query.includes('COMMIT') || e.query.includes('BEGIN') || e.query.includes('ROLLBACK')) return
+//     console.log('Duration: ' + e.duration + 'ms')
+// })
 
 export async function prismaDefaultInsert() {
     for (let i = 0; i < 1000; i++) {

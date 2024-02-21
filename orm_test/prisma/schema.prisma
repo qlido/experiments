@@ -3,11 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = "mysql://root:1234@localhost:3306/ormtest"
+  provider = "postgresql"
+  url      = "postgresql://postgres:1234@localhost:5433/ormtest"
 }
 
 model test {
-  id   Int    @id @default(autoincrement())
-  name String
+  id   Int    @id(map: "PK_5417af0062cf987495b611b59c7") @default(autoincrement())
+  name String @db.VarChar
 }
