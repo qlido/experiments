@@ -35,9 +35,4 @@ export class PrismaController {
   update(@Param('id') id: string, @Body() updatePrismaDto: UpdatePrismaDto) {
     return this.prismaService.update(+id, updatePrismaDto);
   }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.prismaService.remove(+id);
-  }
 }
