@@ -5,6 +5,6 @@
 
 ---
 
-[prisma가 빠를까, typeORM이 빠를까?](https://github.com/HUN1i/experiments/tree/master/prismawhy)
+[prisma가 빠를까, typeORM이 빠를까?](https://github.com/HUN1i/experiments/tree/master/prismawhy)   
 [prisma가 빠를까, typeORM이 빠를까? - 자세한버전](https://github.com/qlido/experiments/tree/master/orm_test)
 
