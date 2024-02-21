@@ -18,6 +18,9 @@ console.time 명령어를 통해 밀리세컨드 단위로 측정
 
 1000개의 post쿼리를 날려 본 결과:
 
+![KakaoTalk_20240221_130213655](https://github.com/HUN1i/experiments/assets/102217780/b4da95bd-0105-42dd-adad-c696a09efe1a)
+![KakaoTalk_20240221_130242648](https://github.com/HUN1i/experiments/assets/102217780/6b7b1d42-fc87-4fec-9a1f-47f37c81f6a0)
+
 prisma: 136.631ms, typeORM: 104.02ms
 
 typeORM이 32ms정도 빠른 것으로 측정됨
